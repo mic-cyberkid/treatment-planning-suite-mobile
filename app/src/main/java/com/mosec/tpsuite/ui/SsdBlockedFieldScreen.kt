@@ -18,6 +18,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.mosec.tpsuite.ui.theme.AccentTeal
+import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -181,12 +182,13 @@ fun SsdBlockedResultCard(result: SsdBlockedFieldViewModel.Result?) {
             )
             HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp), color = AccentTeal.copy(alpha = 0.3f))
             
-            ResultRow("Equivalent FS (cm)", String.format("%.1f", result.eqfs))
-            ResultRow("Reduced Field (cm)", String.format("%.1f", result.reducedField))
-            ResultRow("Sc (Collimator)", String.format("%.4f", result.sc))
-            ResultRow("Sp (Patient)", String.format("%.4f", result.sp))
-            ResultRow("Total Sc,p", String.format("%.4f", result.totalScp))
-            ResultRow("PDD (%)", String.format("%.2f %%", result.pdd))
+            ResultRow("Equivalent FS (cm)", String.format(Locale.US,"%.1f", result.eqfs))
+            ResultRow("Reduced Field (cm)", String.format(Locale.US,"%.1f", result.reducedField))
+            ResultRow("Sc (Collimator)", String.format(Locale.US,"%.4f", result.sc))
+            ResultRow("Sp (Patient)", String.format(Locale.US,"%.4f", result.sp))
+            ResultRow("Total Sc,p", String.format(Locale.US,"%.4f", result.totalScp))
+            ResultRow("Dmax (cGy)", String.format(Locale.US,"%.4f", result.dMax))
+            ResultRow("PDD (%)", String.format(Locale.US,"%.2f %%", result.pdd))
             
             Spacer(modifier = Modifier.height(12.dp))
             

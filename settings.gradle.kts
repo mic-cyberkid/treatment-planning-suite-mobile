@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TestApp"
+rootProject.name = "TPSuite"
 include(":app")
  

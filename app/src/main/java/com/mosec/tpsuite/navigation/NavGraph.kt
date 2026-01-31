@@ -16,7 +16,9 @@ fun NavGraph() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "splash") {
         composable("splash") {
-            SplashScreen(onTimeout = { navController.navigate("login") })
+            SplashScreen(onTimeout = { navController.navigate("dashboard") })
+            // Implement login later
+            //SplashScreen(onTimeout = { navController.navigate("login") })
         }
         composable("login") {
             LoginScreen(onLoginClick = { _, _ -> navController.navigate("dashboard") })

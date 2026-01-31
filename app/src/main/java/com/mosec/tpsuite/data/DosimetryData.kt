@@ -4,7 +4,7 @@ package com.mosec.tpsuite.data
  * Singleton object containing dosimetry lookup tables for TMR, PDD, and SCP.
  * Converted from the original Java DataSheet.
  */
-object DosimetryData {
+object  DosimetryData {
 
     val SCP_SHEET: Map<String, DoubleArray> = mapOf(
         "FS" to doubleArrayOf(4.0, 6.0, 8.0, 10.0, 12.0, 14.0, 16.0, 18.0, 20.0, 22.0, 24.0, 26.0, 28.0, 30.0, 32.0, 34.0, 36.0, 38.0, 40.0, 43.0),

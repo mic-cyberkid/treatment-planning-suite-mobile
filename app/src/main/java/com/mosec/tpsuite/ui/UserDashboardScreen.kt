@@ -56,11 +56,11 @@ fun UserDashboardScreen(
                 }
             )
         },
-        floatingActionButton = {
+         /*floatingActionButton = {
             FloatingActionButton(onClick = onFabClick) {
                 Icon(Icons.Default.Add, contentDescription = "Add")
             }
-        },
+        },*/
         bottomBar = {
             BottomNavigationBar(onNavItemClick = onNavItemClick)
         }
